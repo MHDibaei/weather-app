@@ -1,0 +1,114 @@
+:root {
+    --type-h1: 40px;
+
+    --type-paragraph-regular: 20px;
+    --type-paragraph-small: calc(var(--type-paragraph-regular) / 1.3);
+    --type-paragraph-large: calc(var(--type-paragraph-regular) * 1.3);
+
+    --type-caption-regular: 12px;
+    --type-caption-small: calc(var(--type-caption-regular) / 1.3);
+    --type-caption-large: calc(var(--type-caption-regular) * 1.3);
+
+    --color-body-dark: #4b4b4b;
+    --color-body-light: #f7f7f7;
+    --color-body-back: #283250;
+
+    --color-weather-hot: #FFD470;
+    --color-weather-cold: #99C3FF;
+
+    --color-error: #FF2B00;
+    --color-success: #0DFFB3;
+    --color-warning: #FFBD0D;
+}
+
+body,
+h1,
+div,
+span,
+p,
+section,
+header,
+i,
+a {
+    padding: 0;
+    margin: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    padding-block-start: 0;
+    padding-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-family: roboto, 'roboto';
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--color-body-back);
+    color: var(--color-body-light);
+}
+
+header {
+    padding: 5px 30px;
+    background-color: var(--color-body-light);
+    color: var(--color-body-dark);
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header>h1 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#social-container {
+    font-size: 16px;
+}
+
+#social-container>a {
+    padding: 0 3px;
+    color: var(--color-body-dark);
+}
+
+#title {
+    display: block;
+    width: fit-content;
+    margin: 35px auto;
+}
+
+#main {
+    display: block;
+}
+
+.weather-card {
+    padding: 30px 25px;
+    display: block;
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(247, 247, 247, 0.3) 0%, rgba(247, 247, 247, 0.1) 100%);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid linear-gradient(135deg, rgba(247, 247, 247, 0.33) 0%, rgba(247, 247, 247, 0.13) 100%);
+    display: flex;
+}
+
+.weather-icon-container{
+    width: fit-content;
+}
+
+.weather-icon-container > img{
+    color: var(--color-weather-hot);
+    width: 40%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.weather-description-container{
+}
