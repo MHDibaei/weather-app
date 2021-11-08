@@ -10,7 +10,7 @@ const month = ["January", "February", "March", "April", "May", "June", "July", "
 function getData(city){
     let date = new Date;
     let cityName = `${city}`;
-    let APIKey = '13a49ece254b7f95e3e56d715eddedbe';
+    //let APIKey = '13a49ece254b7f95e3e56d715eddedbe';
     
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIKey}&units=metric`)
     .then(response => response.json())
