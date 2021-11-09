@@ -29,12 +29,26 @@ p,
 section,
 header,
 i,
-a {
+a,
+ul,
+li,
+input,
+button {
 	padding: 0;
 	margin: 0;
 	font-family: "Roboto";
 	box-sizing: border-box;
 	text-decoration: none;
+}
+input {
+    color: var(--color-body-dark);
+    background-color: var(--color-body-light);
+    margin: unset;
+    padding: unset;
+    border-width: unset;
+    border-style: unset;
+    border-color: unset;
+    border-image: unset;
 }
 
 body {
@@ -73,26 +87,56 @@ header>h1 {
 }
 
 #main {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
+	display: block;
 	padding: 0 5vw;
-	gap: 20px;
+}
+
+#search-container{
+	display: block;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+#city-input{
+	width: 100%;
+	padding: 5px;
+	font-size: var(--type-paragraph-regular);
+	border-radius: 5px;
+	display: block;
+}
+
+#search-submit{
+	padding: 5px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	border-left: 2px solid var(--color-body-back);
+}
+
+#search-icon{
+	height: 1.5em;
+	padding: 0;
+	color: var(--color-body-back);
 }
 
 .weather-card {
 	padding: 30px 25px;
-	display: block;
 	width: 500px;
 	height: 250px;
-	margin: 20px;
-	background: linear-gradient(135deg, rgba(247, 247, 247, 0.3) 0%, rgba(247, 247, 247, 0.1) 100%);
-	backdrop-filter: blur(4px);
-	-webkit-backdrop-filter: blur(4px);
+	background: transparent;
+	border: 3px solid var(--color-body-light);
 	border-radius: 20px;
-	border: 1px solid linear-gradient(135deg, rgba(247, 247, 247, 0.33) 0%, rgba(247, 247, 247, 0.13) 100%);
 	display: flex;
+	position: relative;
+	left: 50%;
+	top: 50vh;
+	transform: translate(-50%, -100%);
 }
 
 .weather-icon-container {
