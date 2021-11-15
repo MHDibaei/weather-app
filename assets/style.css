@@ -51,6 +51,11 @@ input {
     border-image: unset;
 }
 
+input:focus-visible,
+input:focus {
+    outline: none;
+}
+
 body {
 	background-color: var(--color-body-back);
 	color: var(--color-body-light);
@@ -125,14 +130,14 @@ header>h1 {
 	color: var(--color-body-back);
 }
 
-.weather-card {
+#weather-card {
 	padding: 30px 25px;
 	width: 500px;
 	height: 250px;
 	background: transparent;
 	border: 3px solid var(--color-body-light);
 	border-radius: 20px;
-	display: flex;
+	display: none;
 	position: relative;
 	left: 50%;
 	top: 50vh;
